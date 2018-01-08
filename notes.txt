@@ -14,3 +14,5 @@ videos -- "django app"
 analytics
 menu listings
 
+6. Rendering HTML
+=================
