@@ -1,0 +1,16 @@
+Getting Started
+---------------
+
+Local settings as well as live settings
+
+4. For your reference
+---------------------
+1. Handles URLs yelp.com -- codingforrentrepreneurs/projects/30-days-python/
+2. Returns responses
+3. Remembers things
+
+accounts -- user "django app"
+videos -- "django app"
+analytics
+menu listings
+
