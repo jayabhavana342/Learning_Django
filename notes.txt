@@ -1,3 +1,5 @@
+https://github.com/codingforentrepreneurs/Try-Django-1.11/tree/master/src
+
 Getting Started
 ---------------
 

@@ -1,9 +1,31 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # Create your views here.
 
-#function based view
+# function based view
 def home(request):
-    return HttpResponse("Hello")
+    html_var = 'f strings'
+    # should have f before """
+
+    html_ = """
+    
+    <!DOCTYPE html>
+    <html lang=en>
+    
+    <head></head>
+    
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is {html_var} coming through</p>
+    </body>
+    
+    </html>
+    
+    """
+
+    # f strings
+
+    return HttpResponse(html_)
     # return render(request, "home.html", {})#response
