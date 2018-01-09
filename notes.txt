@@ -18,3 +18,7 @@ menu listings
 
 6. Rendering HTML
 =================
+
+8-Context in Django Templates
+=============================
+****use Django Template Tags (Built-in Template tags and filters)
