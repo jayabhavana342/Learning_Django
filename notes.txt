@@ -26,3 +26,11 @@ menu listings
 9-Template Inheritance
 ======================
 ****DRY - Don't repeat yourself
+
+13-
+========================
+usname: bhavana
+pswd: bhav1234
+
+usname: ldjango
+paswd: ldjango1234
