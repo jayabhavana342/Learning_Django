@@ -34,3 +34,7 @@ pswd: bhav1234
 
 usname: ldjango
 paswd: ldjango1234
+
+15-
+========================
+Django model fields
