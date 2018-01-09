@@ -22,3 +22,7 @@ menu listings
 8-Context in Django Templates
 =============================
 ****use Django Template Tags (Built-in Template tags and filters)
+
+9-Template Inheritance
+======================
+****DRY - Don't repeat yourself

@@ -3,29 +3,24 @@
 
 <html lang=en>
 
-<head></head>
+<head>
+    <title>
+        {% block head_title %}MuyPicky.com{% endblock head_title %}
+    </title>
+</head>
 
 <body>
-<h1>Hello World!</h1>
-<p>This is {{ html_var }} coming through</p>
-<p>
-    {% if num is not None %}
-    Random Number is: {{ num }}
-    {% endif %}
-</p>
 
-<p>
-    {% for some_item in some_list %}
-    {% if some_item|divisibleby:"2" %}
-    Even Number
-    {% endif %}
-    {{ some_item }}<br>
-    {% endfor %}
-</p>
+<div class="containter">
+    <h1>MuyPicky.com!</h1>
 
-<p>
-    Some item is {{ some_item }}
-</p>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+
+
+    {% block content %}Hello There!!{% endblock content %}
+</div>
 </body>
 
 </html>
