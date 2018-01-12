@@ -21,13 +21,15 @@ from django.views.generic import TemplateView
 from restaurants.views import (
     restaurant_listview,
     RestaurantListView,
-    RestaurantDetailView
+    RestaurantDetailView,
+    restaurant_createview
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html')),
     path('restaurants/', RestaurantListView.as_view()),
+    path('restaurants/create/', restaurant_createview),
     # path('restaurants/<slug:slug>/', RestaurantListView.as_view()),
     path('restaurants/<slug:slug>/', RestaurantDetailView.as_view()),
     # path('restaurants/asian', AsianFusionRestaurantListView.as_view()),
