@@ -38,3 +38,7 @@ paswd: ldjango1234
 15-
 ========================
 Django model fields
+
+17-
+========================
+QuerySets - retriving data from database
