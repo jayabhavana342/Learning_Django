@@ -32,6 +32,7 @@ class RestaurantListView(ListView):
 
 class RestaurantDetailView(DetailView):
     queryset = RestaurantLocation.objects.all()
+    print(queryset)
 
     def get_object(self, *args, **kwargs):
         rest_id = self.kwargs.get('rest_id')
