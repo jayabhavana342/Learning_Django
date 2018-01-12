@@ -22,14 +22,15 @@ from restaurants.views import (
     restaurant_listview,
     RestaurantListView,
     RestaurantDetailView,
-    restaurant_createview
+    restaurant_createview,
+    RestaurantCreateView
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html')),
     path('restaurants/', RestaurantListView.as_view()),
-    path('restaurants/create/', restaurant_createview),
+    path('restaurants/create/', RestaurantCreateView.as_view()),
     # path('restaurants/<slug:slug>/', RestaurantListView.as_view()),
     path('restaurants/<slug:slug>/', RestaurantDetailView.as_view()),
     # path('restaurants/asian', AsianFusionRestaurantListView.as_view()),
