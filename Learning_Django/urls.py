@@ -29,7 +29,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html')),
     path('restaurants/', RestaurantListView.as_view()),
     # path('restaurants/<slug:slug>/', RestaurantListView.as_view()),
-    path('restaurants/<int:rest_id>/', RestaurantDetailView.as_view()),
+    path('restaurants/<slug:slug>/', RestaurantDetailView.as_view()),
     # path('restaurants/asian', AsianFusionRestaurantListView.as_view()),
     path('about/', TemplateView.as_view(template_name='about.html')),
     path('contact/', TemplateView.as_view(template_name='contact.html')),
