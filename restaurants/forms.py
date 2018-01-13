@@ -1,6 +1,6 @@
 from django import forms
-from .models import RestaurantLocation
 
+from .models import RestaurantLocation
 from .validators import validate_category
 
 
@@ -17,14 +17,14 @@ class RestaurantCreateForm(forms.Form):
 
 
 class RestaurantLocationCreateForm(forms.ModelForm):
-    # email = forms.EmailField()
-    # category = forms.CharField(required=False, validators=[validate_category])
+    # email           = forms.EmailField()
+    # category         = forms.CharField(required=False, validators=[validate_category])
     class Meta:
         model = RestaurantLocation
         fields = [
             'name',
             'location',
-            'category'
+            'category',
         ]
 
     def clean_name(self):
@@ -33,8 +33,8 @@ class RestaurantLocationCreateForm(forms.ModelForm):
             raise forms.ValidationError("Not a valid name")
         return name
 
-    # def  clean_email(self):
+    # def clean_email(self):
     #     email = self.cleaned_data.get("email")
-    #     if "edu" in email:
+    #     if ".edu" in email:
     #         raise forms.ValidationError("We do not accept edu emails")
     #     return email
