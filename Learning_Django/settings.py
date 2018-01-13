@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Learning_Django.urls'
+LOGIN_URL = '/login/'
 
 TEMPLATES = [
     {
