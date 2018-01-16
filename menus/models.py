@@ -20,6 +20,9 @@ class Item(models.Model):
     # class Meta:
     #     ordering = ['-item_restaurantlocation__updated','-Item_RestaurantLocation__timestamp']
 
+    def __str__(self):
+        return self.name
+
     def get_contents(self):
         return self.contents.split(",")
 
