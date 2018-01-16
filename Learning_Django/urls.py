@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView
@@ -29,17 +29,11 @@ from restaurants.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='home.html')),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
 
     path('login/', LoginView.as_view(), name='login'),
+    path('restaurants/', include('restaurants.urls', namespace='restaurants')),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
+    path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
 
-    path('restaurants/', RestaurantListView.as_view()),
-    path('restaurants/create/', RestaurantCreateView.as_view()),
-    # path('restaurants/create/', restaurant_createview),
-    # path('restaurants/<slug:slug>/', RestaurantListView.as_view()),
-    path('restaurants/<slug:slug>/', RestaurantDetailView.as_view()),
-    # path('restaurants/asian', AsianFusionRestaurantListView.as_view()),
-    path('about/', TemplateView.as_view(template_name='about.html')),
-    path('contact/', TemplateView.as_view(template_name='contact.html')),
-    # path('contact/<int:id>', ContactView.as_view()),
 ]
