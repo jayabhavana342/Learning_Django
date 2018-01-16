@@ -76,3 +76,8 @@ class RestaurantCreateView(LoginRequiredMixin, CreateView):
         instance = form.save(commit=False)
         instance.owner = self.request.user
         return super(RestaurantCreateView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(RestaurantLocation, self).get_context_data(*kwargs)
+        context['title'] = 'Add Restaurant'
+        return context
