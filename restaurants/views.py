@@ -68,7 +68,7 @@ class RestaurantDetailView(DetailView):
 class RestaurantCreateView(LoginRequiredMixin, CreateView):
     form_class = RestaurantLocationCreateForm
     login_url = "/login/"
-    template_name = 'restaurants/form.html'
+    template_name = 'form.html'
 
     # success_url = "/restaurants/"
 
