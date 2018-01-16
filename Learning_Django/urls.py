@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from django.views.generic import TemplateView
+from django.contrib.auth.views import LoginView
 
 from restaurants.views import (
     restaurant_listview,
@@ -29,6 +30,9 @@ from restaurants.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html')),
+
+    path('login/', LoginView.as_view(), name='login'),
+
     path('restaurants/', RestaurantListView.as_view()),
     path('restaurants/create/', RestaurantCreateView.as_view()),
     # path('restaurants/create/', restaurant_createview),

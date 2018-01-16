@@ -64,15 +64,10 @@ class RestaurantListView(ListView):
 class RestaurantDetailView(DetailView):
     queryset = RestaurantLocation.objects.all()  # .filter(category__iexact='asian') # fitler by user
 
-    # def get_object(self, *args, **kwargs):
-    #     rest_id = self.kwargs.get('rest_id')
-    #     obj = get_object_or_404(RestaurantLocation, id=rest_id) # pk = rest_id
-    #     return obj
-
 
 class RestaurantCreateView(LoginRequiredMixin, CreateView):
     form_class = RestaurantLocationCreateForm
-    login_url = "/login/    "
+    login_url = "/login/"
     template_name = 'restaurants/form.html'
     success_url = "/restaurants/"
 
